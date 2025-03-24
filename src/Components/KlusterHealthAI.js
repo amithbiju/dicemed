@@ -205,39 +205,36 @@ const KlusterHealthAI = () => {
         {/* <p className="text-lg leading-relaxed text-gray-700 mb-4">
           ORCID ID: <a href="https://orcid.org/0009-0005-3026-0959" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">0009-0005-3026-0959</a>
         </p> */}
-         <p className="text-lg leading-relaxed text-gray-700 flex items-center gap-3">
-    <i className="fab fa-linkedin text-blue-600 text-2xl"></i>
-    <a
-      href="https://www.linkedin.com/in/dr-ajo-babu-george"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 underline"
-    >
-      Dr. Ajo Babu George
-    </a>
-  </p>
+         <div className="flex items-center xl:ml-8 ml-6 gap-6 xl:mt-8 mt-4 text-2xl">
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/dr-ajo-babu-george"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-blue-800 transition"
+  >
+    <i className="fab fa-linkedin"></i>
+  </a>
 
-  <p className="text-lg leading-relaxed text-gray-700 flex items-center gap-3">
-    <i className="fab fa-github text-gray-800 text-2xl"></i>
-    <a
-      href="https://github.com/Ajogeorge29"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 underline"
-    >
-      Ajogeorge29
-    </a>
-  </p>
+  {/* GitHub */}
+  <a
+    href="https://github.com/Ajogeorge29"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-800 hover:text-black transition"
+  >
+    <i className="fab fa-github"></i>
+  </a>
 
-  <p className="text-lg leading-relaxed text-gray-700 flex items-center gap-3">
-    <i className="fas fa-envelope text-red-600 text-2xl"></i>
-    <a
-      href="mailto:drajo_george@klusterhealth.co.in"
-      className="text-blue-600 underline"
-    >
-      drajo_george@klusterhealth.co.in
-    </a>
-  </p>
+  {/* Email */}
+  <a
+    href="mailto:drajo_george@klusterhealth.co.in"
+    className="text-red-600 hover:text-red-800 transition"
+  >
+    <i className="fas fa-envelope"></i>
+  </a>
+</div>
+
       </div>
     </div>
   </div>
