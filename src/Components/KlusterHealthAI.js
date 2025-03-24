@@ -9,7 +9,9 @@ import mituImage from '../Assets/mitu.jpg';
 import backgroundImage from '../Assets/cover image.jpeg';
 import deepanshuImage from '../Assets/my pic of google.jpeg';
 import manuImage from '../Assets/manu.png';
-import sadhvikImage from '../Assets/sadhvik.png';
+import sadhvikImage from '../Assets/sadvik.jpg';
+import abiyaImage from '../Assets/george.jpg';
+import rejiImage from '../Assets/reji.jpg';
 
 const KlusterHealthAI = () => {
   const scrollToSection = (id) => {
@@ -172,10 +174,10 @@ const KlusterHealthAI = () => {
           <h2 className="text-4xl font-semibold">About KlusterHealth</h2>
           <hr className='xl:mb-3 mb-2 mt-1 xl:w-3/6 mx-auto'></hr>
           <p className="text-lg leading-relaxed text-gray-700 mb-8">
-            KlusterHealthAI is at the forefront of AI-driven healthcare transformation. We specialize in advanced medical imaging solutions that empower healthcare professionals with actionable insights. Our cutting-edge technology supports multi-disease analysis, bridging the gap between diagnosis and patient care.
+            KlusterHealth is at the forefront of AI-driven healthcare transformation. We specialize in advanced medical imaging solutions that empower healthcare professionals with actionable insights. Our cutting-edge technology supports multi-disease analysis, bridging the gap between diagnosis and patient care.
           </p>
           <p className="text-lg leading-relaxed text-gray-700 mb-10">
-            With KlusterHealth-1, our flagship product, we focus on tackling complex medical cases through AI-enhanced imaging and reporting. Our mission is to assist doctors in delivering accurate, timely, and effective diagnoses while ensuring seamless integration into their workflow.
+            With KlusterHealth, our flagship product, we focus on tackling complex medical cases through AI-enhanced imaging and reporting. Our mission is to assist doctors in delivering accurate, timely, and effective diagnoses while ensuring seamless integration into their workflow.
           </p>
         </div>
       </section>
@@ -264,12 +266,19 @@ const KlusterHealthAI = () => {
           </p>
           <ul className="space-y-4 text-left max-w-3xl mx-auto">
             <li className="bg-white p-4 shadow rounded hover:bg-blue-50 transition">
-              <h3 className="font-semibold">AI-Powered Detection of Oral Lesions Using Advanced Imaging - 2024</h3>
-              <p className="text-sm text-gray-600">Journal of Oral Medicine and Radiology</p>
+              <h3 className="font-semibold">nnU-Net-Based Automated Nasopalatine Nerve Segmentation for Maxillofacial Surgery -2025
+              </h3>
+              <p className="text-sm text-gray-600">Ongoing Research</p>
             </li>
             <li className="bg-white p-4 shadow rounded hover:bg-blue-50 transition">
-              <h3 className="font-semibold">Multi-Disease Analysis in Medical Imaging: Challenges & Solutions - 2023</h3>
-              <p className="text-sm text-gray-600">International Journal of AI in Healthcare</p>
+              <h3 className="font-semibold">FedDPI-SH: A Quality- and Similarity-Aware Federated Learning Framework for Medical Image Analysis -2025
+              </h3>
+              <p className="text-sm text-gray-600">Ongoing Research</p>
+            </li>
+            <li className="bg-white p-4 shadow rounded hover:bg-blue-50 transition">
+              <h3 className="font-semibold">Multi-Source Clinical Case Data for Enhanced Rare Disease Analytics: A Framework for Predictive Modeling and Policy-Oriented Insights -2025
+              </h3>
+              <p className="text-sm text-gray-600">Ongoing Research</p>
             </li>
             {/* Add more publications as needed */}
           </ul>
@@ -280,13 +289,39 @@ const KlusterHealthAI = () => {
       <section id="research-group" className="py-20 px-5 bg-white">
   <div className="max-w-5xl mx-auto text-center">
     <h2 className="text-4xl font-semibold">Our Group</h2>
-    <hr className='xl:mb-3 mb-8 mt-1 xl:w-1/6 w-4/6 mx-auto'></hr>
+    <hr className='xl:mb-10 mb-8 mt-1 xl:w-1/6 w-4/6 mx-auto'></hr>
+    {/* Clinical Team */}
+    {/* <h3 className="text-3xl font-semibold">Clinical Team</h3>
+    <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
+    <div className="flex flex-col md:flex-row justify-center gap-10 mb-16">
+      {[
+
+{ name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
+{ name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' }
+
+
+      ].map((member) => (
+        <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-64 mx-auto">
+          <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
+            <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 className="text-xl font-semibold">
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              {member.name}
+            </a>
+          </h3>
+          <p className="text-gray-600">{member.role}</p>
+        </div>
+      ))}
+    </div> */}
+
     {/* Core Team */}
     <h3 className="text-3xl font-semibold">Core Team</h3>
     <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
     <div className="flex flex-col md:flex-row justify-center gap-10 mb-16">
       {[
-
+        { name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
+        { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' },
         { name: 'Deepanshu Arya', role: 'Software Developer', image: deepanshuImage, linkedin: 'https://www.linkedin.com/in/deepanshuarya2024' },
         { name: 'Manu Govind', role: 'Robotics', image: manuImage, linkedin: 'https://www.linkedin.com/in/manu-govind-v ' },
         { name: 'Sadhvik Bathini', role: 'Image Analysis', image: sadhvikImage, linkedin: 'https://www.linkedin.com/in/sadhvikbathini' }
@@ -311,12 +346,14 @@ const KlusterHealthAI = () => {
     <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
     <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
   {[
-    { name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
-    { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' },
-    { name: 'Atul', role: 'Data Scientist', image: athulImage, linkedin: 'https://www.linkedin.com/in/athul-anoop-a85068281/' },
-    { name: 'Sreehari', role: 'Imaging Specialist', image: sreehariImage, linkedin: 'http://www.linkedin.com/in/sreehari-j-r-1b9b991ba' },
-    { name: 'Pranav', role: 'Computer Vision', image: pranavImage, linkedin: 'http://www.linkedin.com/in/s-pranav-s' },
-    { name: 'Anna Mariam John', role: 'AI/ML Engineer', image: annaImage, linkedin: 'https://www.linkedin.com/in/anna-mariam-john' }
+    { name: 'Dr. Abiya Mariam George', role: 'Clinical Advisor', image: abiyaImage, linkedin: ' ' },
+    { name: 'Dr. Roshan Reji', role: 'Clinical Advisor', image: rejiImage, linkedin: '' },
+    { name: 'Anna Mariam John', role: 'Jr. AI/ML Engineer', image: annaImage, linkedin: 'https://www.linkedin.com/in/anna-mariam-john' },
+    { name: 'Atul', role: 'ML Intern', image: athulImage, linkedin: 'https://www.linkedin.com/in/athul-anoop-a85068281/' },
+    { name: 'Sreehari', role: 'ML Intern', image: sreehariImage, linkedin: 'http://www.linkedin.com/in/sreehari-j-r-1b9b991ba' },
+    { name: 'Pranav', role: 'ML Intern', image: pranavImage, linkedin: 'http://www.linkedin.com/in/s-pranav-s' }
+
+
   ].map((member) => (
     <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-full mx-auto">
       <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
@@ -384,10 +421,10 @@ const KlusterHealthAI = () => {
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-6 text-center">
-        <p>© 2025 KlusterHealthAI. All rights reserved.</p>
-        <p className="mt-2">
+        <p>© 2025 KlusterHealth. All rights reserved.</p>
+        {/* <p className="mt-2">
           ORCID ID: <a href="https://orcid.org/0009-0005-3026-0959" target="_blank" rel="noopener noreferrer" className="underline">0009-0005-3026-0959</a>
-        </p>
+        </p> */}
       </footer>
     </div>
   );
