@@ -14,10 +14,12 @@ import abiyaImage from '../Assets/george.jpg';
 import rejiImage from '../Assets/reji.jpg';
 
 const KlusterHealthAI = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
   const [contactForm, setContactForm] = useState({
@@ -101,7 +103,7 @@ const KlusterHealthAI = () => {
   };
 
   const handleLearnMore = () => {
-    scrollToSection('about');
+  scrollToSection('about'); // or navigate to a scheduling form
   };
 
   return (
@@ -119,8 +121,26 @@ const KlusterHealthAI = () => {
             <button onClick={() => scrollToSection('research-group')} className="hover:text-blue-300">Research Group</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-blue-300">Contact</button>
           </div>
+          <div className="xl:hidden flex gap-8 xl:gap-0">
+  {/* Links */}
+</div>
+
+<div className="md:hidden flex items-center">
+  <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+    <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
+  </button>
+</div>
         </div>
       </nav>
+      {isMenuOpen && (
+  <div className="absolute top-16 left-0 w-full bg-blue-900 text-white flex flex-col items-center gap-4 py-4 md:hidden z-50">
+    <button onClick={() => scrollToSection('about')}>About</button>
+    <button onClick={() => scrollToSection('drajo')}>Dr. Ajo</button>
+    <button onClick={() => scrollToSection('publications')}>Publications</button>
+    <button onClick={() => scrollToSection('research-group')}>Research Group</button>
+    <button onClick={() => scrollToSection('contact')}>Contact</button>
+  </div>
+)}
 
       {/* Hero Section */}
       <section id="hero" className="relative pt-20 pb-10 px-5 xl:h-[60vh] h-[48vh] text-center">
