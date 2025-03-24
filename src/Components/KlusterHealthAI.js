@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import yourImage from '../Assets/39245 av.JPG';
+import yourImage from '../Assets/ajo.jpg';
 import athulImage from '../Assets/atul.png';
 import sreehariImage from '../Assets/sreehari.png';
 import pranavImage from '../Assets/WhatsApp Image 2025-03-24 at 16.14.57_2dad9595.jpg';
 import annaImage from '../Assets/anna.jpg';
 import drImage from '../Assets/dr.png';
 import mituImage from '../Assets/mitu.jpg';
+import backgroundImage from '../Assets/cover image.jpeg';
+import deepanshuImage from '../Assets/my pic of google.jpeg';
+import manuImage from '../Assets/manu.png';
+import sadhvikImage from '../Assets/sadhvik.png';
 
 const KlusterHealthAI = () => {
   const scrollToSection = (id) => {
@@ -104,7 +108,7 @@ const KlusterHealthAI = () => {
       <nav className="bg-blue-900 text-white py-4 px-6 fixed w-full top-0 z-50 shadow-lg">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <div className="text-xl font-bold cursor-pointer" onClick={() => scrollToSection('hero')}>
-            KlusterHealthAI
+            KlusterHealth
           </div>
           <div className="hidden md:flex gap-8">
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-300">About</button>
@@ -117,31 +121,60 @@ const KlusterHealthAI = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white pt-32 pb-20 px-5 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6">KlusterHealthAI</h1>
-          <p className="text-xl leading-relaxed mb-8">
-            Revolutionizing Healthcare with AI-Powered Medical Imaging Solutions.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center gap-6">
-            <button onClick={handleScheduleDemo} className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-              Schedule a Demo
-            </button>
-            <button onClick={handleLearnMore} className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
+      <section id="hero" className="relative pt-20 pb-10 px-5 xl:h-[60vh] h-[48vh] text-center">
+  {/* Image as Background */}
+  <img
+    src={backgroundImage}
+    alt="Background"
+    className="absolute inset-0 w-full h-full object-cover -z-10"
+  />
+
+  {/* Centered Content */}
+  <div className="absolute inset-0 flex items-center justify-center z-10">
+    <div className="text-center max-w-4xl xl:px-4 px-8 mt-48 xl:mt-36 bg-gray-800 xl:bg-transparent bg-opacity-50 rounded-2xl py-2">
+      <h1 className="xl:text-5xl text-3xl font-bold  text-white">
+        KlusterHealth
+      </h1>
+      <hr className='xl:mb-3 mb-2 mt-1'></hr>
+      <p className="text-base xl:text-xl leading-relaxed xl:mb-5 mb-3 text-white">
+        Revolutionizing Healthcare with AI-Powered<br/> Medical Imaging Solutions.
+      </p>
+      <div className="flex flex-col sm:flex-col justify-center items-center">
+        <button
+          onClick={handleScheduleDemo}
+          className="bg-white text-blue-700 px-6 py-2 w-full text-lg rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition xl:mb-3 mb-2"
+        >
+          Schedule a Demo
+        </button>
+        <button
+          onClick={handleLearnMore}
+          className="border border-white text-white px-6 py-2 w-full rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition mb-1 xl:mb-0"
+        >
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
       {/* About Section */}
       <section id="about" className="py-20 px-5 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold mb-6">About KlusterHealthAI</h2>
+          <h2 className="text-4xl font-semibold">About KlusterHealth</h2>
+          <hr className='xl:mb-3 mb-2 mt-1 xl:w-3/6 mx-auto'></hr>
           <p className="text-lg leading-relaxed text-gray-700 mb-8">
             KlusterHealthAI is at the forefront of AI-driven healthcare transformation. We specialize in advanced medical imaging solutions that empower healthcare professionals with actionable insights. Our cutting-edge technology supports multi-disease analysis, bridging the gap between diagnosis and patient care.
           </p>
-          <p className="text-lg leading-relaxed text-gray-700">
+          <p className="text-lg leading-relaxed text-gray-700 mb-10">
             With KlusterHealth-1, our flagship product, we focus on tackling complex medical cases through AI-enhanced imaging and reporting. Our mission is to assist doctors in delivering accurate, timely, and effective diagnoses while ensuring seamless integration into their workflow.
           </p>
         </div>
@@ -149,33 +182,83 @@ const KlusterHealthAI = () => {
 
       {/* Dr. Ajo Babu George */}
       <section id="drajo" className="py-20 px-5 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold mb-6">Dr. Ajo Babu George</h2>
-          <div className="flex flex-col md:flex-row gap-10 justify-center items-center">
-            {/* Image Placeholder */}
-            <div className="w-72 h-72 flex items-center justify-center text-gray-500 border-2 border-gray-400 rounded-full">
-      <img
-        src={yourImage}
-        alt="Ajo Babu George"
-        className="w-72 h-72 object-cover rounded-full"
-      />
+  <div className="max-w-5xl mx-auto text-center">
+
+    <div className="flex flex-col md:flex-row gap-10 justify-center items-center">
+      {/* Image Placeholder */}
+      <div className="w- h-96 flex items-center justify-center text-gray-500 border-gray-400 xl:mb-0 mb-40">
+        <img
+          src={yourImage}
+          alt="Ajo Babu George"
+          className="w-full object-cover rounded-full"
+        />
+        <div className='w-[30vw]'>&nbsp;</div>
+      </div>
+      <div className="text-left max-w-xl">
+      <h2 className="text-4xl font-semibold">Dr. Ajo Babu George</h2>
+      <hr className='xl:mb-3 mb-2 mt-2 xl:w-3/6'></hr>
+        <p className="text-lg leading-relaxed text-gray-700 mb-4">
+          Dr. Ajo Babu George is a distinguished specialist in Oral Medicine and Dentomaxillofacial Radiology with years of clinical and academic experience. He leads KlusterHealthAI with a vision to bridge technology and healthcare. His research focuses on AI in medical imaging, promoting precision diagnostics and improved patient outcomes.
+        </p>
+        {/* <p className="text-lg leading-relaxed text-gray-700 mb-4">
+          ORCID ID: <a href="https://orcid.org/0009-0005-3026-0959" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">0009-0005-3026-0959</a>
+        </p> */}
+        <p className="text-lg leading-relaxed text-gray-700 mb-2 mt-8">
+          LinkedIn: <a href="https://www.linkedin.com/in/dr-ajo-babu-george" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Dr. Ajo Babu George</a>
+        </p>
+        <p className="text-lg leading-relaxed text-gray-700 mb-2">
+          Github: <a href="https://github.com/Ajogeorge29" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Ajogeorge29</a>
+        </p>
+        <p className="text-lg leading-relaxed text-gray-700">
+          Email: <a href="mailto:drajo_george@klusterhealth.co.in" className="text-blue-600 underline">drajo_george@klusterhealth.co.in</a>
+        </p>
+      </div>
     </div>
-            <div className="text-left max-w-xl">
-              <p className="text-lg leading-relaxed text-gray-700 mb-4">
-                Dr. Ajo Babu George is a distinguished specialist in Oral Medicine and Radiology with years of clinical and academic experience. He leads KlusterHealthAI with a vision to bridge technology and healthcare. His research focuses on AI in medical imaging, promoting precision diagnostics and improved patient outcomes.
-              </p>
-              <p className="text-lg leading-relaxed text-gray-700">
-                ORCID ID: <a href="https://orcid.org/0009-0005-3026-0959" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">0009-0005-3026-0959</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
+
+<section id="about-dr-ajo" className="py-20 px-5 bg-gray-50 text-gray-700 mt-1">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-semibold text-center">About Dr. Ajo Babu George</h2>
+    <hr className='xl:mb-5 mb-8 mt-2 xl:w-3/6 mx-auto'></hr>
+    <div className="space-y-12">
+      {/* Education */}
+      <div>
+        <h3 className="text-2xl font-semibold">Education</h3>
+        <hr className='xl:mb-3 mb-2 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
+        <p className="text-lg leading-relaxed">
+          Dr. Ajo Babu George's educational background includes a Bachelor of Dental Surgery (BDS) degree, followed by a Master of Dental Surgery (MDS) with a specialization in Dentomaxillofacial Radiology. Additionally, he pursued a Minor in Artificial Intelligence from the Indian Institute of Technology (IIT) Ropar, reflecting his commitment to interdisciplinary growth and continuous learning. Dr. George also holds an MBA in Healthcare and Hospital Management from IGNOU, equipping him with essential management skills specific to healthcare institutions.
+        </p>
+      </div>
+
+      {/* Professional Experience */}
+      <div>
+        <h3 className="text-2xl font-semibold">Professional Experience</h3>
+        <hr className='xl:mb-3 mb-2 mt-1 xl:w-1/6 w-3/6 mx-auto'></hr>
+        <p className="text-lg leading-relaxed">
+          Dr. George’s professional journey spans clinical practice and innovation. He served as a Senior Resident at SCB Medical College Hospital, where he gained valuable clinical experience in a high-pressure environment. His innovative spirit led him to participate in the CLiMB (Clinical Innovation in Medicine and Biodesign) fellowship at ICMR-IIT Kharagpur. This prestigious program focuses on medical device innovation and provides a platform for healthcare professionals to collaborate with engineers and designers to create novel solutions for healthcare challenges.
+        </p>
+      </div>
+
+      {/* Skills and Interests */}
+      <div>
+        <h3 className="text-2xl font-semibold">Skills and Interests</h3>
+        <hr className='xl:mb-3 mb-2 mt-1 xl:w-1/6 w-3/6 mx-auto'></hr>
+        <p className="text-lg leading-relaxed">
+          Dr. George’s unique blend of medical expertise and technological acumen is evident in his diverse skill set. He is proficient in various programming languages and machine learning frameworks, which he showcases on his GitHub profile. This technical expertise, combined with his deep medical knowledge, places him at the forefront of healthcare innovation. Dr. Ajo Babu George’s journey exemplifies the convergence of medicine, technology, and management, positioning him as a valuable asset in the evolving landscape of healthcare, where technological advancements are increasingly shaping patient care and medical practices.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Publications */}
       <section id="publications" className="py-20 px-5 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold mb-6">Publications</h2>
+          <h2 className="text-4xl font-semibold">Publications</h2>
+          <hr className='xl:mb-5 mb-4 mt-1 xl:w-3/6 mx-auto'></hr>
           <p className="text-lg text-gray-700 mb-8">
             Explore our latest research contributions in AI and healthcare technologies.
           </p>
@@ -194,25 +277,25 @@ const KlusterHealthAI = () => {
       </section>
 
       {/* Research Group */}
-      {/* Research Group */}
-<section id="research-group" className="py-20 px-5 bg-white">
+      <section id="research-group" className="py-20 px-5 bg-white">
   <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-4xl font-semibold mb-8">Our Research Group</h2>
-    <div className="flex flex-col md:flex-row justify-center gap-10">
-      {/* Team Members */}
+    <h2 className="text-4xl font-semibold">Our Group</h2>
+    <hr className='xl:mb-3 mb-8 mt-1 xl:w-1/6 w-4/6 mx-auto'></hr>
+    {/* Core Team */}
+    <h3 className="text-3xl font-semibold">Core Team</h3>
+    <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
+    <div className="flex flex-col md:flex-row justify-center gap-10 mb-16">
       {[
-        { name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist',image:drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
-        { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor',image:mituImage, linkedin: '#' },
-        { name: 'Atul', role: 'Data Scientist', image: athulImage, linkedin: 'https://www.linkedin.com/in/athul-anoop-a85068281/' },
-        { name: 'Sreehari', role: 'Imaging Specialist', image: sreehariImage, linkedin: 'http://www.linkedin.com/in/sreehari-j-r-1b9b991ba' },
-        { name: 'Pranav', role: 'Computer Vision', image: pranavImage, linkedin: 'http://www.linkedin.com/in/s-pranav-s' },
-        { name: 'Anna Mariam John', role: 'AI/ML Engineer', image: annaImage, linkedin: 'https://www.linkedin.com/in/anna-mariam-john' }
+
+        { name: 'Deepanshu Arya', role: 'Software Developer', image: deepanshuImage, linkedin: 'https://www.linkedin.com/in/deepanshuarya2024' },
+        { name: 'Manu Govind', role: 'Robotics', image: manuImage, linkedin: 'https://www.linkedin.com/in/manu-govind-v ' },
+        { name: 'Sadhvik Bathini', role: 'Image Analysis', image: sadhvikImage, linkedin: 'https://www.linkedin.com/in/sadhvikbathini' }
 
       ].map((member) => (
         <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-64 mx-auto">
           <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
-                  <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
-                </div>
+            <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
+          </div>
           <h3 className="text-xl font-semibold">
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
               {member.name}
@@ -222,14 +305,43 @@ const KlusterHealthAI = () => {
         </div>
       ))}
     </div>
+
+    {/* Research Team */}
+    <h3 className="text-3xl font-semibold">Research Team</h3>
+    <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+  {[
+    { name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
+    { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' },
+    { name: 'Atul', role: 'Data Scientist', image: athulImage, linkedin: 'https://www.linkedin.com/in/athul-anoop-a85068281/' },
+    { name: 'Sreehari', role: 'Imaging Specialist', image: sreehariImage, linkedin: 'http://www.linkedin.com/in/sreehari-j-r-1b9b991ba' },
+    { name: 'Pranav', role: 'Computer Vision', image: pranavImage, linkedin: 'http://www.linkedin.com/in/s-pranav-s' },
+    { name: 'Anna Mariam John', role: 'AI/ML Engineer', image: annaImage, linkedin: 'https://www.linkedin.com/in/anna-mariam-john' }
+  ].map((member) => (
+    <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-full mx-auto">
+      <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
+        <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
+      </div>
+      <h3 className="text-xl font-semibold">
+        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+          {member.name}
+        </a>
+      </h3>
+      <p className="text-gray-600">{member.role}</p>
+    </div>
+  ))}
+</div>
+
   </div>
 </section>
+
 
 
       {/* Contact */}
       <section id="contact" className="py-20 px-5 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold mb-6">Contact Us</h2>
+          <h2 className="text-4xl font-semibold">Contact Us</h2>
+          <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-3/6 mx-auto'></hr>
           <p className="text-lg text-gray-700 mb-8">
             Have questions or want to collaborate? Reach out to our team!
           </p>
