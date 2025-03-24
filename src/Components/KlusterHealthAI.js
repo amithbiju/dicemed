@@ -318,16 +318,16 @@ const KlusterHealthAI = () => {
     {/* Core Team */}
     <h3 className="text-3xl font-semibold">Core Team</h3>
     <hr className='xl:mb-3 mb-4 mt-1 xl:w-1/6 w-2/6 mx-auto'></hr>
-    <div className="flex flex-col md:flex-row justify-center gap-10 mb-16">
+    <div className="flex flex-col gap-10 mb-16 w-full">
+  {/* Desktop / Tablet layout */}
+  <div className="hidden md:grid md:grid-cols-1 gap-10">
+    {/* First row with 2 members */}
+    <div className="flex justify-center gap-10">
       {[
         { name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
-        { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' },
-        { name: 'Deepanshu Arya', role: 'Software Developer', image: deepanshuImage, linkedin: 'https://www.linkedin.com/in/deepanshuarya2024' },
-        { name: 'Manu Govind', role: 'Robotics', image: manuImage, linkedin: 'https://www.linkedin.com/in/manu-govind-v ' },
-        { name: 'Sadhvik Bathini', role: 'Image Analysis', image: sadhvikImage, linkedin: 'https://www.linkedin.com/in/sadhvikbathini' }
-
+        { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' }
       ].map((member) => (
-        <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-64 mx-auto">
+        <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-64">
           <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
             <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
           </div>
@@ -340,6 +340,75 @@ const KlusterHealthAI = () => {
         </div>
       ))}
     </div>
+
+    {/* Second row with 3 members */}
+    <div className="flex justify-center gap-10">
+      {[
+        { name: 'Deepanshu Arya', role: 'Software Developer', image: deepanshuImage, linkedin: 'https://www.linkedin.com/in/deepanshuarya2024' },
+        { name: 'Manu Govind', role: 'Robotics Expert Advisor', image: manuImage, linkedin: 'https://www.linkedin.com/in/manu-govind-v' },
+        { name: 'Sadhvik Bathini', role: 'Neural Network Expert Advisor', image: sadhvikImage, linkedin: 'https://www.linkedin.com/in/sadhvikbathini' }
+      ].map((member) => (
+        <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-64">
+          <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
+            <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 className="text-xl font-semibold">
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              {member.name}
+            </a>
+          </h3>
+          <p className="text-gray-600">{member.role}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Mobile layout */}
+  <div className="flex md:hidden gap-6">
+    {/* First column with 2 members */}
+    <div className="flex flex-col gap-10 flex-1">
+      {[
+        { name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
+        { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' }
+      ].map((member) => (
+        <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-full mx-auto">
+          <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
+            <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 className="text-xl font-semibold">
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              {member.name}
+            </a>
+          </h3>
+          <p className="text-gray-600">{member.role}</p>
+        </div>
+      ))}
+    </div>
+
+    {/* Second column with 3 members */}
+    <div className="flex flex-col gap-10 flex-1">
+      {[
+        { name: 'Deepanshu Arya', role: 'Software Developer', image: deepanshuImage, linkedin: 'https://www.linkedin.com/in/deepanshuarya2024' },
+        { name: 'Manu Govind', role: 'Robotics Expert Advisor', image: manuImage, linkedin: 'https://www.linkedin.com/in/manu-govind-v' },
+        { name: 'Sadhvik Bathini', role: 'Neural Network Expert Advisor', image: sadhvikImage, linkedin: 'https://www.linkedin.com/in/sadhvikbathini' }
+      ].map((member) => (
+        <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-full mx-auto">
+          <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
+            <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
+          </div>
+          <h3 className="text-xl font-semibold">
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              {member.name}
+            </a>
+          </h3>
+          <p className="text-gray-600">{member.role}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
 
     {/* Research Team */}
     <h3 className="text-3xl font-semibold">Research Team</h3>
