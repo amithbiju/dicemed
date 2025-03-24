@@ -118,7 +118,7 @@ const KlusterHealthAI = () => {
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-300">About</button>
             <button onClick={() => scrollToSection('drajo')} className="hover:text-blue-300">Dr. Ajo</button>
             <button onClick={() => scrollToSection('publications')} className="hover:text-blue-300">Publications</button>
-            <button onClick={() => scrollToSection('research-group')} className="hover:text-blue-300">Research Group</button>
+            <button onClick={() => scrollToSection('research-group')} className="hover:text-blue-300">Our Team</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-blue-300">Contact</button>
           </div>
           <div className="xl:hidden flex gap-8 xl:gap-0">
@@ -133,14 +133,20 @@ const KlusterHealthAI = () => {
         </div>
       </nav>
       {isMenuOpen && (
-  <div className="absolute top-16 left-0 w-full bg-blue-900 text-white flex flex-col items-center gap-4 py-4 md:hidden z-50">
-    <button onClick={() => scrollToSection('about')}>About</button>
-    <button onClick={() => scrollToSection('drajo')}>Dr. Ajo</button>
-    <button onClick={() => scrollToSection('publications')}>Publications</button>
-    <button onClick={() => scrollToSection('research-group')}>Research Group</button>
-    <button onClick={() => scrollToSection('contact')}>Contact</button>
+  <div className="fixed top-0 left-0 w-full h-full bg-blue-900 text-white flex flex-col items-center justify-center gap-8 py-4 md:hidden z-50">
+    <button onClick={() => setIsMenuOpen(false)} className="absolute top-6 right-6 text-3xl">
+      <i className="fas fa-times"></i>
+    </button>
+
+    <button onClick={() => { scrollToSection('about'); setIsMenuOpen(false); }}>About</button>
+    <button onClick={() => { scrollToSection('drajo'); setIsMenuOpen(false); }}>Dr. Ajo</button>
+    <button onClick={() => { scrollToSection('publications'); setIsMenuOpen(false); }}>Publications</button>
+    <button onClick={() => { scrollToSection('research-group'); setIsMenuOpen(false); }}>Our Team</button>
+    <button onClick={() => { scrollToSection('contact'); setIsMenuOpen(false); }}>Contact</button>
   </div>
 )}
+
+
 
       {/* Hero Section */}
       <section id="hero" className="relative pt-20 pb-10 px-5 xl:h-[60vh] h-[48vh] text-center">
@@ -329,7 +335,7 @@ const KlusterHealthAI = () => {
       {/* Research Group */}
       <section id="research-group" className="py-20 px-5 bg-white">
   <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-4xl font-semibold">Our Group</h2>
+    <h2 className="text-4xl font-semibold">Our Team</h2>
     <hr className='xl:mb-10 mb-8 mt-1 xl:w-1/6 w-4/6 mx-auto'></hr>
     {/* Clinical Team */}
     {/* <h3 className="text-3xl font-semibold">Clinical Team</h3>
