@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import logo from './logo.svg';
 import KlusterHealthAI from './Components/KlusterHealthAI';
 import './App.css';

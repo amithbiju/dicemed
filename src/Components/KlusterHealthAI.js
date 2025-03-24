@@ -156,7 +156,7 @@ const KlusterHealthAI = () => {
             <div className="w-72 h-72 flex items-center justify-center text-gray-500 border-2 border-gray-400 rounded-full">
       <img
         src={yourImage}
-        alt="Image Description"
+        alt="Ajo Babu George"
         className="w-72 h-72 object-cover rounded-full"
       />
     </div>
@@ -211,7 +211,7 @@ const KlusterHealthAI = () => {
       ].map((member) => (
         <div key={member.name} className="bg-gray-50 rounded-lg shadow-md p-6 w-64 mx-auto">
           <div className="w-28 h-28 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center text-gray-500">
-                  <img src={member.image} className="w-full h-full object-cover rounded-full" />
+                  <img src={member.image} alt='' className="w-full h-full object-cover rounded-full" />
                 </div>
           <h3 className="text-xl font-semibold">
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
