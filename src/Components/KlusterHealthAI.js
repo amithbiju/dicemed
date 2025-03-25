@@ -465,7 +465,7 @@ const KlusterHealthAI = () => {
     { name: 'Dr. Abiya Mariam George', role: 'Clinical Advisor', image: abiyaImage, linkedin: ' ' },
     { name: 'Dr. Roshan Reji', role: 'Clinical Advisor', image: rejiImage, linkedin: '' },
     { name: 'Anna Mariam John', role: 'Jr. AI/ML Engineer', image: annaImage, linkedin: 'https://www.linkedin.com/in/anna-mariam-john' },
-    { name: 'Atul', role: 'ML Intern', image: athulImage, linkedin: 'https://www.linkedin.com/in/athul-anoop-a85068281/' },
+    { name: 'Athul', role: 'ML Intern', image: athulImage, linkedin: 'https://www.linkedin.com/in/athul-anoop-a85068281/' },
     { name: 'Sreehari', role: 'ML Intern', image: sreehariImage, linkedin: 'http://www.linkedin.com/in/sreehari-j-r-1b9b991ba' },
     { name: 'Pranav', role: 'ML Intern', image: pranavImage, linkedin: 'http://www.linkedin.com/in/s-pranav-s' }
 
