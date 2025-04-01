@@ -13,7 +13,7 @@ import sadhvikImage from '../Assets/sadvik.jpg';
 import abiyaImage from '../Assets/george.jpg';
 import rejiImage from '../Assets/reji.jpg';
 
-const KlusterHealthAI = () => {
+const DiceMed = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
@@ -67,7 +67,7 @@ const KlusterHealthAI = () => {
 
     const emailBody = `Dear Dr. Ajo Babu George,
 
-  I want to contact you regarding your work at healthepoc.
+  I want to contact you regarding your work at DiceMed.
 
   Details:
   Name: ${name}
@@ -78,7 +78,7 @@ const KlusterHealthAI = () => {
   ${name}`;
 
     openMailClient({
-      to: 'drajo_george@healthepoc.com',
+      to: 'drajo_george@DiceMed.in',
       subject: `Contact Request from ${name}`,
       body: emailBody
     });
@@ -91,11 +91,11 @@ const KlusterHealthAI = () => {
 
   const handleScheduleDemo = () => {
     openMailClient({
-      to: 'drajo_george@healthepoc.com',
-      subject: 'Request to Schedule a Demo with healthepoc',
+      to: 'drajo_george@DiceMed.in',
+      subject: 'Request to Schedule a Demo with DiceMed',
       body: `Dear Dr. Ajo Babu George,
 
-  I am interested in scheduling a demo for healthepoc's solutions. Please let me know a convenient time.
+  I am interested in scheduling a demo for DiceMed's solutions. Please let me know a convenient time.
 
   Thank you,
   [Your Name]`
@@ -112,7 +112,7 @@ const KlusterHealthAI = () => {
       <nav className="bg-blue-900 text-white py-4 px-6 fixed w-full top-0 z-50 shadow-lg">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <div className="text-xl font-bold cursor-pointer" onClick={() => scrollToSection('hero')}>
-            healthepoc
+            DiceMed
           </div>
           <div className="hidden md:flex gap-8">
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-300">About</button>
@@ -161,7 +161,7 @@ const KlusterHealthAI = () => {
   <div className="absolute inset-0 flex items-center justify-center z-10">
     <div className="text-center max-w-4xl xl:px-4 px-8 mt-48 xl:mt-36 bg-gray-800 xl:bg-transparent bg-opacity-50 rounded-2xl py-2">
       <h1 className="xl:text-5xl text-3xl font-bold  text-white">
-        healthepoc
+        DiceMed
       </h1>
       <hr className='xl:mb-3 mb-2 mt-1'></hr>
       <p className="text-base xl:text-xl leading-relaxed xl:mb-5 mb-3 text-white">
@@ -197,13 +197,13 @@ const KlusterHealthAI = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-5 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold">About healthepoc</h2>
+          <h2 className="text-4xl font-semibold">About DiceMed</h2>
           <hr className='xl:mb-3 mb-2 mt-1 xl:w-3/6 mx-auto'></hr>
           <p className="text-lg leading-relaxed text-gray-700 mb-8">
-            healthepoc is at the forefront of AI-driven healthcare transformation. We specialize in advanced medical imaging solutions that empower healthcare professionals with actionable insights. Our cutting-edge technology supports multi-disease analysis, bridging the gap between diagnosis and patient care.
+            DiceMed is at the forefront of AI-driven healthcare transformation. We specialize in advanced medical imaging solutions that empower healthcare professionals with actionable insights. Our cutting-edge technology supports multi-disease analysis, bridging the gap between diagnosis and patient care.
           </p>
           <p className="text-lg leading-relaxed text-gray-700 mb-10">
-            With healthepoc, our flagship product, we focus on tackling complex medical cases through AI-enhanced imaging and reporting. Our mission is to assist doctors in delivering accurate, timely, and effective diagnoses while ensuring seamless integration into their workflow.
+            With DiceMed, our flagship product, we focus on tackling complex medical cases through AI-enhanced imaging and reporting. Our mission is to assist doctors in delivering accurate, timely, and effective diagnoses while ensuring seamless integration into their workflow.
           </p>
         </div>
       </section>
@@ -226,7 +226,7 @@ const KlusterHealthAI = () => {
       <h2 className="text-4xl font-semibold">Dr. Ajo Babu George</h2>
       <hr className='xl:mb-3 mb-2 mt-2 xl:w-3/6'></hr>
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
-          Dr. Ajo Babu George is a distinguished specialist in Oral Medicine and Dentomaxillofacial Radiology with years of clinical and academic experience. He leads healthepoc with a vision to bridge technology and healthcare. His research focuses on AI in medical imaging, promoting precision diagnostics and improved patient outcomes.
+          Dr. Ajo Babu George is a distinguished specialist in Oral Medicine and Dentomaxillofacial Radiology with years of clinical and academic experience. He leads DiceMed with a vision to bridge technology and healthcare. His research focuses on AI in medical imaging, promoting precision diagnostics and improved patient outcomes.
         </p>
         {/* <p className="text-lg leading-relaxed text-gray-700 mb-4">
           ORCID ID: <a href="https://orcid.org/0009-0005-3026-0959" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">0009-0005-3026-0959</a>
@@ -254,7 +254,7 @@ const KlusterHealthAI = () => {
 
   {/* Email */}
   <a
-    href="mailto:drajo_george@healthepoc.com"
+    href="mailto:drajo_george@DiceMed.in"
     className="text-red-600 hover:text-red-800 transition"
   >
     <i className="fas fa-envelope"></i>
@@ -343,7 +343,7 @@ const KlusterHealthAI = () => {
     <div className="flex flex-col md:flex-row justify-center gap-10 mb-16">
       {[
 
-{ name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.com/in/dr-kunal-agarwal-a50812211' },
+{ name: 'Dr. Kunal Agarwal', role: 'Maxillofacial Radiologist', image: drImage, linkedin: 'https://www.linkedin.in/in/dr-kunal-agarwal-a50812211' },
 { name: 'Dr. Mitu Singhal', role: 'Clinical Advisor', image: mituImage, linkedin: '#' }
 
 
@@ -537,7 +537,7 @@ const KlusterHealthAI = () => {
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-6 text-center">
-        <p>© 2025 healthepoc. All rights reserved.</p>
+        <p>© 2025 DiceMed. All rights reserved.</p>
         {/* <p className="mt-2">
           ORCID ID: <a href="https://orcid.org/0009-0005-3026-0959" target="_blank" rel="noopener noreferrer" className="underline">0009-0005-3026-0959</a>
         </p> */}
@@ -546,4 +546,4 @@ const KlusterHealthAI = () => {
   );
 };
 
-export default KlusterHealthAI;
+export default DiceMed;
