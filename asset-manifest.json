@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/dicemed/static/css/main.79acd0de.css",
+    "main.js": "/dicemed/static/js/main.5555e660.js",
+    "static/js/453.bb828c5d.chunk.js": "/dicemed/static/js/453.bb828c5d.chunk.js",
+    "static/media/fa-solid-900.ttf": "/dicemed/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/mitu.jpg": "/dicemed/static/media/mitu.ad7640ec23786ef92311.jpg",
+    "static/media/sreehari.png": "/dicemed/static/media/sreehari.8374c55de7e99a1d1d05.png",
+    "static/media/atul.png": "/dicemed/static/media/atul.427301f88a824e890de4.png",
+    "static/media/manu.png": "/dicemed/static/media/manu.cfdb66200527ac2f3e0b.png",
+    "static/media/WhatsApp Image 2025-03-24 at 16.14.57_2dad9595.jpg": "/dicemed/static/media/WhatsApp Image 2025-03-24 at 16.14.57_2dad9595.f9daf505f6832a12c81d.jpg",
+    "static/media/fa-brands-400.ttf": "/dicemed/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/dr.png": "/dicemed/static/media/dr.2d4e4ee634fe296a4662.png",
+    "static/media/fa-solid-900.woff2": "/dicemed/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/reji.jpg": "/dicemed/static/media/reji.da151cd7b7f8adc185f1.jpg",
+    "static/media/fa-brands-400.woff2": "/dicemed/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/cover image.jpeg": "/dicemed/static/media/cover image.dab7fd4eaed68155eb43.jpeg",
+    "static/media/george.jpg": "/dicemed/static/media/george.5c70cb0950c9b72bf75c.jpg",
+    "static/media/my pic of google.jpeg": "/dicemed/static/media/my pic of google.7a8f0d3808946d33108e.jpeg",
+    "static/media/anna.jpg": "/dicemed/static/media/anna.484ab425fdb2aae7f5b6.jpg",
+    "static/media/fa-regular-400.ttf": "/dicemed/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/dicemed/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/ajo.jpg": "/dicemed/static/media/ajo.08efe9adfec22ab9c618.jpg",
+    "static/media/sadvik.jpg": "/dicemed/static/media/sadvik.9cbe757cd21a6db58bd7.jpg",
+    "static/media/fa-v4compatibility.ttf": "/dicemed/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/dicemed/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "static/media/logo.svg": "/dicemed/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/dicemed/index.html",
+    "main.79acd0de.css.map": "/dicemed/static/css/main.79acd0de.css.map",
+    "main.5555e660.js.map": "/dicemed/static/js/main.5555e660.js.map",
+    "453.bb828c5d.chunk.js.map": "/dicemed/static/js/453.bb828c5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79acd0de.css",
+    "static/js/main.5555e660.js"
+  ]
+}
