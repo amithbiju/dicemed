@@ -109,27 +109,6 @@ const DiceMed = () => {
 
   return (
     <div className="font-sans text-gray-800">
-      {/* About Section */}
-      <section id="about" className="py-20 px-5 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold">About DiceMed</h2>
-          <hr className="xl:mb-3 mb-2 mt-1 xl:w-3/6 mx-auto"></hr>
-          <p className="text-lg leading-relaxed text-gray-700 mb-8">
-            DiceMed is at the forefront of AI-driven healthcare transformation.
-            We specialize in advanced medical imaging solutions that empower
-            healthcare professionals with actionable insights. Our cutting-edge
-            technology supports multi-disease analysis, bridging the gap between
-            diagnosis and patient care.
-          </p>
-          <p className="text-lg leading-relaxed text-gray-700 mb-10">
-            With DiceMed, our flagship product, we focus on tackling complex
-            medical cases through AI-enhanced imaging and reporting. Our mission
-            is to assist doctors in delivering accurate, timely, and effective
-            diagnoses while ensuring seamless integration into their workflow.
-          </p>
-        </div>
-      </section>
-
       {/* Dr. Ajo Babu George */}
       <section id="drajo" className="py-20 px-5 bg-white">
         <div className="max-w-5xl mx-auto text-center">
