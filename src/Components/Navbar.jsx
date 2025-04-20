@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="hidden md:flex gap-8">
             {[
               "about",
-              "drajo",
+              "dr. Ajo",
               "publications",
               "research-group",
               "contact",
