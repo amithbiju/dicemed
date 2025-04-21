@@ -6,21 +6,13 @@ import pranavImage from "../Assets/WhatsApp Image 2025-03-24 at 16.14.57_2dad959
 import annaImage from "../Assets/anna.jpg";
 import drImage from "../Assets/dr.png";
 import mituImage from "../Assets/mitu.jpg";
-import backgroundImage from "../Assets/cover image.jpeg";
 import deepanshuImage from "../Assets/my pic of google.jpeg";
 import manuImage from "../Assets/manu.png";
 import sadhvikImage from "../Assets/sadvik.jpg";
 import abiyaImage from "../Assets/george.jpg";
 import rejiImage from "../Assets/reji.jpg";
-import { motion } from "framer-motion";
 
 const DiceMed = () => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -88,23 +80,6 @@ const DiceMed = () => {
       subject
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
-  };
-
-  const handleScheduleDemo = () => {
-    openMailClient({
-      to: "drajo_george@DiceMed.in",
-      subject: "Request to Schedule a Demo with DiceMed",
-      body: `Dear Dr. Ajo Babu George,
-
-  I am interested in scheduling a demo for DiceMed's solutions. Please let me know a convenient time.
-
-  Thank you,
-  [Your Name]`,
-    });
-  };
-
-  const handleLearnMore = () => {
-    scrollToSection("about"); // or navigate to a scheduling form
   };
 
   return (
