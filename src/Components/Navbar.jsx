@@ -1,8 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { ChevronDown, Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropOpen, setIsDropOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const menuItems = [
+    {
+      name: "Image Requisition Form",
+      type: "navigate",
+      target: "/imagescanrequisition",
+    },
+    {
+      name: "Prescription Generator",
+      type: "navigate",
+      target: "/prescriptiongenerator",
+    },
+  ];
+  const navigate = useNavigate();
+  const handleMenuClick = (item) => {
+    if (item.type === "scroll") {
+      scrollToSection(item.target);
+    } else if (item.type === "navigate") {
+      navigate(item.target);
+    }
+    setIsMenuOpen(false);
+  };
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -40,13 +77,65 @@ const Navbar = () => {
             DiceMed
           </div>
           <div className="hidden md:flex gap-8">
-            {[
-              "about",
-              "dr. Ajo",
-              "publications",
-              "research-group",
-              "contact",
-            ].map((item) => (
+            {["about", "dr. Ajo", "publications", "research-group"].map(
+              (item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className="hover:text-blue-300 transition duration-300"
+                >
+                  {item
+                    .replace("-", " ")
+                    .replace(/\b\w/g, (c) => c.toUpperCase())}
+                </button>
+              )
+            )}
+            <div className="relative inline-block" ref={dropdownRef}>
+              {/* Menu Button */}
+              <button
+                onClick={() => setIsDropOpen(!isDropOpen)}
+                className="flex items-center gap-1 px-4 py-1 text-white    transition-all duration-300 "
+              >
+                <button className="hover:text-blue-300 transition duration-300">
+                  Tools
+                </button>
+                <ChevronDown
+                  size={16}
+                  className={`transform transition-transform duration-200 ${
+                    isDropOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Menu */}
+              {isDropOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64  backdrop-blur-md border border-white/20 rounded-xl shadow-2xl z-50 overflow-hidden">
+                  <div className="py-2">
+                    {menuItems.map((item, index) => (
+                      <button
+                        key={item.name}
+                        onClick={() => handleMenuClick(item)}
+                        className="w-full text-left px-6 py-3 text-white hover:bg-white/10 transition-all duration-200 border-b border-white/5 last:border-b-0 group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span
+                            className={`${
+                              scrolled ? "text-black" : "text-white"
+                            } text-lg font-medium group-hover:text-blue-300 transition-colors duration-200`}
+                          >
+                            {item.name}
+                          </span>
+                          {item.type === "navigate" && (
+                            <div className="w-2 h-2 bg-blue-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-200"></div>
+                          )}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            {["contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -90,11 +179,11 @@ const Navbar = () => {
             </button>
 
             {[
-              "about",
-              "drajo",
-              "publications",
-              "research-group",
-              "contact",
+              "About",
+              "Dr.Ajo",
+              "Publications",
+              "Research Group",
+              "Contact ",
             ].map((item) => (
               <button
                 key={item}
@@ -109,6 +198,47 @@ const Navbar = () => {
                   .replace(/\b\w/g, (c) => c.toUpperCase())}
               </button>
             ))}
+            <div className="relative inline-block" ref={dropdownRef}>
+              {/* Menu Button */}
+              <button
+                onClick={() => setIsDropOpen(!isDropOpen)}
+                className="flex items-center gap-1 px-4 py-1 text-white    transition-all duration-300 "
+              >
+                <button className="ext-xl font-medium hover:text-blue-300 transition duration-300">
+                  Tools
+                </button>
+                <ChevronDown
+                  size={16}
+                  className={`transform transition-transform duration-200 ${
+                    isDropOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Menu */}
+              {isDropOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64  backdrop-blur-md border border-white/20 rounded-xl shadow-2xl z-50 overflow-hidden">
+                  <div className="py-2">
+                    {menuItems.map((item, index) => (
+                      <button
+                        key={item.name}
+                        onClick={() => handleMenuClick(item)}
+                        className="w-full text-left px-6 py-3 text-white hover:bg-white/10 transition-all duration-200 border-b border-white/5 last:border-b-0 group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-lg font-medium group-hover:text-blue-300 transition-colors duration-200">
+                            {item.name}
+                          </span>
+                          {item.type === "navigate" && (
+                            <div className="w-2 h-2 bg-blue-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-200"></div>
+                          )}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
